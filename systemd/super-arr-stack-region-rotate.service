@@ -1,0 +1,9 @@
+[Unit]
+Description=Rotate Super Arr Stack PIA region
+Wants=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+Environment=APP_ROOT=/opt/super-arr-stack
+ExecStart=/opt/super-arr-stack/scripts/rotate-vpn-region.sh

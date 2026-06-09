@@ -1,0 +1,9 @@
+.env
+docker-compose.yml
+data/
+backups/
+logs/
+*.log
+*.tar.gz
+*.bak
+.DS_Store

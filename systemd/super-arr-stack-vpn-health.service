@@ -1,0 +1,9 @@
+[Unit]
+Description=Super Arr Stack VPN health check
+Wants=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+Environment=APP_ROOT=/opt/super-arr-stack
+ExecStart=/opt/super-arr-stack/scripts/vpn-healthcheck.sh
