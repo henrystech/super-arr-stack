@@ -3,6 +3,7 @@
 data/
 backups/
 logs/
+docs/superpowers/
 *.log
 *.tar.gz
 *.bak
