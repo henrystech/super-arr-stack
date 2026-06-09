@@ -97,11 +97,13 @@ PGID=${PGID_VALUE}
 
 LAN_NETWORK=${LAN_NETWORK}
 
-PIA_USER=${PIA_USER}
-PIA_PASSWORD=${PIA_PASSWORD}
+VPN_SERVICE_PROVIDER=${VPN_SERVICE_PROVIDER}
+VPN_USER=${VPN_USER}
+VPN_PASSWORD=${VPN_PASSWORD}
 VPN_TYPE=${VPN_TYPE}
 VPN_REGIONS=${VPN_REGIONS}
-VPN_PORT_FORWARDING=on
+VPN_PORT_FORWARDING=${VPN_PORT_FORWARDING}
+VPN_PORT_FORWARDING_PROVIDER=${VPN_PORT_FORWARDING_PROVIDER}
 
 QBIT_WEBUI_PORT=${QBIT_WEBUI_PORT}
 QBIT_TORRENT_PORT=${QBIT_TORRENT_PORT}
@@ -134,11 +136,19 @@ main() {
   LAN_NETWORK="$(prompt "LAN subnet allowed through Gluetun firewall" "192.168.1.0/24")"
 
   echo
-  echo "Private Internet Access"
-  PIA_USER="$(prompt "PIA username" "")"
-  PIA_PASSWORD="$(prompt_secret "PIA password")"
+  echo "VPN provider"
+  VPN_SERVICE_PROVIDER="$(prompt "Gluetun VPN provider name" "private internet access")"
+  VPN_USER="$(prompt "VPN username" "")"
+  VPN_PASSWORD="$(prompt_secret "VPN password")"
   VPN_TYPE="$(prompt "VPN protocol: wireguard or openvpn" "wireguard")"
-  VPN_REGIONS="$(prompt "Preferred PIA regions, comma separated" "Mexico,Panama,US Florida,Netherlands,Switzerland,Sweden")"
+  VPN_REGIONS="$(prompt "Preferred VPN regions, comma separated" "Mexico,Panama,US Florida,Netherlands,Switzerland,Sweden")"
+  if yes_no "Enable VPN port forwarding if your provider supports it?" "yes"; then
+    VPN_PORT_FORWARDING="on"
+    VPN_PORT_FORWARDING_PROVIDER="$(prompt "Gluetun port forwarding provider" "$VPN_SERVICE_PROVIDER")"
+  else
+    VPN_PORT_FORWARDING="off"
+    VPN_PORT_FORWARDING_PROVIDER="$VPN_SERVICE_PROVIDER"
+  fi
 
   echo
   echo "Ports"

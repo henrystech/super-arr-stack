@@ -4,7 +4,7 @@
 
 **Goal:** Build a first public release scaffold for Super Arr Stack, a guided Ubuntu installer for a VPN-protected qBittorrent and Arr media stack.
 
-**Architecture:** The project uses Bash scripts and Docker Compose templates. The installer collects user choices, writes a `.env`, renders `docker-compose.yml`, optionally configures NFS, and starts the stack. Helper scripts provide VPN health checks, PIA region rotation, qBittorrent port sync guidance, and backups.
+**Architecture:** The project uses Bash scripts and Docker Compose templates. The installer collects user choices, writes a `.env`, renders `docker-compose.yml`, optionally configures NFS, and starts the stack. Helper scripts provide VPN health checks, VPN region rotation, qBittorrent port sync guidance, and backups.
 
 **Tech Stack:** Bash, Docker Compose, Gluetun, linuxserver.io media containers, systemd timers.
 
@@ -37,7 +37,7 @@ Include every variable used by templates without real credentials.
 
 - [x] **Step 1: Add interactive prompts**
 
-Collect app root, data root, timezone, PUID/PGID, VPN credentials, protocol, PIA regions, storage mode, NFS values, and optional app selections.
+Collect app root, data root, timezone, PUID/PGID, VPN provider, VPN credentials, protocol, VPN regions, storage mode, NFS values, and optional app selections.
 
 - [x] **Step 2: Add Docker check**
 
@@ -75,7 +75,7 @@ Check Gluetun health endpoint and public IP through the VPN container.
 
 - [x] **Step 2: Add region rotation**
 
-Rotate through configured PIA regions and restart Gluetun.
+Rotate through configured VPN regions and restart Gluetun.
 
 - [x] **Step 3: Add port sync helper**
 

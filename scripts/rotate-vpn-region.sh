@@ -36,5 +36,5 @@ cat "$tmp_env" > "$ENV_FILE"
 rm -f "$tmp_env"
 
 echo "$next_index" > "$STATE_FILE"
-echo "Rotating VPN region to: $next_region"
+echo "Rotating VPN location to: $next_region"
 docker compose --env-file "$ENV_FILE" -f "$COMPOSE_FILE" up -d --force-recreate gluetun

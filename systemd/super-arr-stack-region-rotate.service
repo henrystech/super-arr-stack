@@ -1,5 +1,5 @@
 [Unit]
-Description=Rotate Super Arr Stack PIA region
+Description=Rotate Super Arr Stack VPN region
 Wants=docker.service
 After=docker.service
 

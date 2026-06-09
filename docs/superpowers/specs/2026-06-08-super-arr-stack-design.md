@@ -2,14 +2,15 @@
 
 ## Goal
 
-Super Arr Stack is a guided Ubuntu installer for a media automation stack that keeps qBittorrent locked behind a Private Internet Access VPN while leaving the Arr apps reachable on the local network.
+Super Arr Stack is a guided Ubuntu installer for a media automation stack that keeps qBittorrent locked behind a Gluetun-supported VPN while leaving the Arr apps reachable on the local network.
 
 ## Promises
 
 - qBittorrent traffic only exits through the VPN gateway.
 - If the VPN is down, qBittorrent has no direct internet path.
-- Users can choose PIA WireGuard or OpenVPN.
-- Users can pick preferred PIA regions, including Europe-focused choices.
+- Private Internet Access is the default VPN provider, but users can choose other Gluetun-supported providers.
+- Users can choose WireGuard or OpenVPN when their provider supports it.
+- Users can pick preferred VPN regions, including Europe-focused choices.
 - Users can mount storage directly through NFS or use an already mounted Proxmox/VirtioFS path.
 - The stack is easy to inspect, backup, migrate, and modify.
 - No VPN credentials, API keys, or generated passwords are committed to Git.
@@ -41,7 +42,7 @@ Storage is mounted at a stable data path, usually `/data`. The installer can cre
 
 ## VPN Region Strategy
 
-The stack accepts comma-separated PIA regions. It includes a helper script that rotates to the next region and restarts Gluetun. A future version can benchmark regions by latency, VPN health, forwarded port availability, and optional speed tests.
+The stack accepts comma-separated VPN regions. It includes a helper script that rotates to the next region and restarts Gluetun. A future version can benchmark regions by latency, VPN health, forwarded port availability, and optional speed tests.
 
 WireGuard is the recommended default because it is usually faster and lighter. OpenVPN remains available as a fallback for networks where WireGuard is unreliable.
 

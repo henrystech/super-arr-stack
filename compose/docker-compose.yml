@@ -8,13 +8,13 @@ services:
       - /dev/net/tun:/dev/net/tun
     environment:
       - TZ=${TZ}
-      - VPN_SERVICE_PROVIDER=private internet access
+      - VPN_SERVICE_PROVIDER=${VPN_SERVICE_PROVIDER}
       - VPN_TYPE=${VPN_TYPE}
-      - OPENVPN_USER=${PIA_USER}
-      - OPENVPN_PASSWORD=${PIA_PASSWORD}
+      - OPENVPN_USER=${VPN_USER}
+      - OPENVPN_PASSWORD=${VPN_PASSWORD}
       - SERVER_REGIONS=${VPN_REGIONS}
       - VPN_PORT_FORWARDING=${VPN_PORT_FORWARDING}
-      - VPN_PORT_FORWARDING_PROVIDER=private internet access
+      - VPN_PORT_FORWARDING_PROVIDER=${VPN_PORT_FORWARDING_PROVIDER}
       - VPN_PORT_FORWARDING_STATUS_FILE=/gluetun/forwarded_port
       - FIREWALL_OUTBOUND_SUBNETS=${LAN_NETWORK}
       - HTTPPROXY=off

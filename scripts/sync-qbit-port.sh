@@ -19,7 +19,7 @@ QBIT_WEBUI_PORT="$(get_env_value QBIT_WEBUI_PORT)"
 
 if [[ ! -f "$FORWARDED_PORT_FILE" ]]; then
   echo "Forwarded port file not found: $FORWARDED_PORT_FILE"
-  echo "Wait for Gluetun to connect and request a PIA forwarded port."
+  echo "Wait for Gluetun to connect and request a forwarded port from your VPN provider."
   exit 1
 fi
 
