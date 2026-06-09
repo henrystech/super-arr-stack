@@ -4,7 +4,7 @@
 
 Super Arr Stack is a guided Ubuntu installer for a media automation stack that keeps qBittorrent locked behind a Gluetun-supported VPN while leaving the Arr apps reachable on the local network.
 
-## Promises
+## Design Goals
 
 - qBittorrent traffic only exits through the VPN gateway.
 - If the VPN is down, qBittorrent has no direct internet path.

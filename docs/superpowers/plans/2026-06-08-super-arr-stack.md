@@ -20,7 +20,7 @@
 
 - [x] **Step 1: Write public-facing README**
 
-Explain the project promises, included apps, storage choices, VPN behavior, install command, and first-run notes.
+Explain the project design goals, included apps, storage choices, VPN behavior, install command, and first-run notes.
 
 - [x] **Step 2: Add license and ignore rules**
 

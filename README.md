@@ -4,7 +4,7 @@ Super Arr Stack is a guided Ubuntu installer for a media automation stack with q
 
 The goal is simple: make a strong, understandable Arr stack that normal homelab users can run, inspect, backup, migrate, and improve.
 
-## What It Promises
+## Design Goals
 
 - qBittorrent uses the VPN only.
 - If the VPN drops, qBittorrent has no direct internet route.
@@ -124,6 +124,22 @@ NAS -> Proxmox -> Ubuntu VM -> Docker containers
 For Proxmox homelabs, the existing mount path is usually cleaner because storage stays centralized in Proxmox.
 
 ## Quick Start
+
+Copy-paste quick install:
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/henrystech/super-arr-stack/main/bootstrap.sh)"
+```
+
+Review first, then run:
+
+```bash
+curl -fsSLO https://raw.githubusercontent.com/henrystech/super-arr-stack/main/bootstrap.sh
+less bootstrap.sh
+bash bootstrap.sh
+```
+
+Manual install:
 
 ```bash
 git clone https://github.com/henrystech/super-arr-stack.git
