@@ -31,6 +31,22 @@ The official Gluetun wiki currently includes provider pages for:
 - Windscribe
 - Custom providers
 
+## List Current Server Locations
+
+Use the helper script to print the current server list known by your Gluetun image:
+
+```bash
+./scripts/list-vpn-servers.sh private-internet-access
+./scripts/list-vpn-servers.sh protonvpn
+./scripts/list-vpn-servers.sh mullvad
+```
+
+To save the output:
+
+```bash
+./scripts/list-vpn-servers.sh private-internet-access docs/pia-current-servers.md
+```
+
 ## Recommended Defaults
 
 For qBittorrent, use a VPN provider that supports port forwarding. Port forwarding usually improves torrent connectivity because peers can initiate connections to your client.

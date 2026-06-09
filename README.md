@@ -92,6 +92,17 @@ Netherlands,Switzerland,Sweden,Germany,UK London
 
 The exact region names depend on what your provider and Gluetun currently support. If a region fails, remove it from `.env` or rotate to another one. Gluetun typically uses display-style names such as `Netherlands` or `US Florida`.
 
+For Private Internet Access examples, see:
+
+- [Private Internet Access region guide](docs/private-internet-access-regions.md)
+- [Private Internet Access plain text quick list](docs/private-internet-access-regions.txt)
+
+To ask Gluetun for the current provider server list:
+
+```bash
+./scripts/list-vpn-servers.sh private-internet-access
+```
+
 ## Storage Choices
 
 ### Direct NFS
@@ -178,6 +189,7 @@ software
 ./scripts/sync-qbit-port.sh
 ./scripts/backup-configs.sh
 ./scripts/benchmark-pia-regions.sh
+./scripts/list-vpn-servers.sh
 ```
 
 ## Notes

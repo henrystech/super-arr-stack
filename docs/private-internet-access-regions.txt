@@ -1,0 +1,79 @@
+Private Internet Access region quick picks for Super Arr Stack
+
+For the current Gluetun-supported list, run:
+  ./scripts/list-vpn-servers.sh private-internet-access
+
+Save the current list:
+  ./scripts/list-vpn-servers.sh private-internet-access docs/pia-current-servers.md
+
+Balanced:
+  VPN_REGIONS=Mexico,Panama,US Florida,US Atlanta,CA Toronto,Netherlands
+
+Europe:
+  VPN_REGIONS=Netherlands,Switzerland,Sweden,Germany,UK London
+
+United States:
+  VPN_REGIONS=US Florida,US Atlanta,US Texas,US California,US New York
+
+Privacy-leaning Europe:
+  VPN_REGIONS=Switzerland,Sweden,Netherlands
+
+Common North America regions:
+  CA Montreal
+  CA Ontario
+  CA Toronto
+  CA Vancouver
+  Mexico
+  Panama
+  US Atlanta
+  US California
+  US Chicago
+  US Dallas
+  US Denver
+  US East
+  US Florida
+  US Houston
+  US Las Vegas
+  US New York
+  US Seattle
+  US Silicon Valley
+  US Texas
+  US Washington DC
+
+Common Europe regions:
+  Austria
+  Belgium
+  Czech Republic
+  Denmark
+  France
+  Germany
+  Ireland
+  Italy
+  Netherlands
+  Norway
+  Poland
+  Portugal
+  Romania
+  Spain
+  Sweden
+  Switzerland
+  UK London
+  UK Manchester
+
+Common Asia Pacific regions:
+  Australia
+  AU Melbourne
+  AU Sydney
+  Hong Kong
+  India
+  Japan
+  Singapore
+  South Korea
+  Taiwan
+  New Zealand
+
+Other common regions:
+  Brazil
+  Israel
+  South Africa
+  United Arab Emirates

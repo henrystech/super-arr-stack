@@ -68,6 +68,7 @@ Define SABnzbd, Bazarr, Readarr, FlareSolverr, Unpackerr, and Dozzle Agent with 
 - Create: `scripts/sync-qbit-port.sh`
 - Create: `scripts/backup-configs.sh`
 - Create: `scripts/benchmark-pia-regions.sh`
+- Create: `scripts/list-vpn-servers.sh`
 
 - [x] **Step 1: Add health check**
 
@@ -88,6 +89,10 @@ Archive `.env`, compose file, and app data into `backups/`.
 - [x] **Step 5: Add simple benchmark helper**
 
 Measure approximate latency for configured regions by timing Gluetun reconnects and health recovery.
+
+- [x] **Step 6: Add server-list helper**
+
+Use Gluetun's `format-servers` command to print or save the current provider server list.
 
 ### Task 5: Systemd Templates
 
